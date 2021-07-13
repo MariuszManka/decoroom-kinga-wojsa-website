@@ -39,5 +39,15 @@ module.exports = {
         apiToken: process.env.DATO_CMS_API_KEY,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto\:400,500`,
+          `Montserrat\: 400,600`
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
