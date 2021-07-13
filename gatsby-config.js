@@ -30,7 +30,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -39,5 +39,15 @@ module.exports = {
         apiToken: process.env.DATO_CMS_API_KEY,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto\:400,500`,
+          `Montserrat\: 400,600`
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
