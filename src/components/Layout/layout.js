@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import ThemeProvider from '../Theme/ThemeProvider'
+import ThemeProvider from '../../Theme/ThemeProvider'
 
 import "./layout.css"
 
