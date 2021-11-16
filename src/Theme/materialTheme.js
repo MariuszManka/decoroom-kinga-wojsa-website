@@ -11,8 +11,12 @@ let materialTheme = createTheme({
 	},
 	palette: {
 	  primary: {
-		 main: '#f2c01b',
-		 overlay: 'rgba(0,0,0,0.65)'
+		 main: '#B3A66C',
+		 white: '#ededed',
+		 greyLighten: '#222222',
+		 greyDarken: '#1B1B1B',
+		 darkenGold: '#B3A66C',
+		 lightenGold: '#C3B473',
 	  },
 	},
  });

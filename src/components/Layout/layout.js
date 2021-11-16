@@ -8,7 +8,9 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider>
-      {children}
+      <div className="page-wrapper">
+        {children}
+      </div>
     </ThemeProvider>
   )
 }

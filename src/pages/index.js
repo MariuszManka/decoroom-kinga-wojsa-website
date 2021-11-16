@@ -1,17 +1,15 @@
 import * as React from "react"
-
+import HeroSection from '../components/HeroSection/HeroSection'
 import Layout from "../components/Layout/layout"
 import Seo from "../components/seo"
-import WaitingForPage from '../components/WaitingForPage/WaitingForPage'
 
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <WaitingForPage />
+      <HeroSection />
     </Layout>
   )
 }
-
 
 export default IndexPage
