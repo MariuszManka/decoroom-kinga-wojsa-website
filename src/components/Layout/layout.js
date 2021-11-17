@@ -5,7 +5,6 @@ import ThemeProvider from '../../Theme/ThemeProvider'
 import "./layout.css"
 
 const Layout = ({ children }) => {
-
   return (
     <ThemeProvider>
       <div className="page-wrapper">

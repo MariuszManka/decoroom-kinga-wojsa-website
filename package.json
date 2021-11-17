@@ -21,12 +21,15 @@
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-theme-material-ui": "^2.0.1",
     "gatsby-transformer-sharp": "^3.9.0",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-datocms": "^1.6.6",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.8",
     "prettier": "2.3.2"
   },
   "keywords": [

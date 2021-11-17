@@ -2,11 +2,12 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container,  Typography } from '@material-ui/core'
-import { useHeroSectionStyles } from './HeroSection.styled';
+import { useHeroSectionStyles } from './HeroSection.styled'
+import Topbar from './Topbar/Topbar'
 
 const HeroSection = () => {
 
-   const data = useStaticQuery(graphql`
+   const { datoCmsHeroSection } = useStaticQuery(graphql`
       query HeroImage {
          datoCmsHeroSection {
             headingText
@@ -18,14 +19,15 @@ const HeroSection = () => {
       }`
    )
 
-   const {heroSectionWrapper, heroSectionImage, heroSectionHeadingWrapper, heroSectionHeadingText } = useHeroSectionStyles()
-   const heroImage = getImage(data.datoCmsHeroSection.heroImage)
+   const { heroSectionWrapper, heroSectionImage, heroSectionHeadingWrapper, heroSectionHeadingText } = useHeroSectionStyles()
+   const heroImage = getImage(datoCmsHeroSection.heroImage)
 
    return(
      <div className={heroSectionWrapper}>
-       <GatsbyImage image={heroImage} alt={data.datoCmsHeroSection.heroImage.alt} className={heroSectionImage} />
+       <Topbar /> 
+       <GatsbyImage image={heroImage} alt={datoCmsHeroSection.heroImage.alt} className={heroSectionImage} />
        <Container classes={{ root: heroSectionHeadingWrapper }} maxWidth='md'>
-         <Typography classes={{ root: heroSectionHeadingText }} component='h1' variant='h2'>{data.datoCmsHeroSection.headingText}</Typography>
+         <Typography classes={{ root: heroSectionHeadingText }} component='h1' variant='h2'>{datoCmsHeroSection.headingText}</Typography>
        </Container>
      </div>
    )
