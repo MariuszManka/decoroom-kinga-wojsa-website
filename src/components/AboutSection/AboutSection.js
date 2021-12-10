@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { StructuredText } from 'react-datocms'
 import { useAboutSectionStyles } from './AboutSection.style'
+import ResponsiveTimeline from './Timeline/Timeline'
+import './AboutSection.css'
 
 
 const AboutSection = ({ sectionID }) => {
@@ -45,44 +47,43 @@ const AboutSection = ({ sectionID }) => {
   const aboutPhoto3 = getImage(datoCmsAboutSection.aboutPhoto3)
   const aboutPartnershipPhoto = getImage(datoCmsAboutSection.aboutPartnershipPhoto)
 
-  return(
-    <Grid 
-      id={sectionID} 
-      container 
-      direction="column"
-      justifyContent="center"
-      alignItems="stretch"
-      style={{ gridArea: 'about' }}
-      >
-      <Grid container xs >
-        <Grid item xs={2}>
-          <GatsbyImage image={profileImage} alt={datoCmsAboutSection.aboutProfileImage.alt} className={aboutSectionImage} />
-        </Grid>
-        <Grid item xs={4} className={aboutSectionDescriptionWrapper}>
-          <Typography align="center" noWrap variant="h4" className={aboutSectionHeading} >
-            {datoCmsAboutSection.aboutHeading}
-          </Typography>
-          <StructuredText 
-            data={datoCmsAboutSection.aboutTextContent}
-          />
-        </Grid>
-        <Grid item xs={2}>
-            <GatsbyImage image={aboutPhoto1} alt={datoCmsAboutSection.aboutPhoto1.alt} className={aboutSectionImage} />
-        </Grid>
-        <Grid item xs={2}>
-            <GatsbyImage image={aboutPhoto2} alt={datoCmsAboutSection.aboutPhoto2.alt} className={aboutSectionImage} />
-        </Grid>
-        <Grid item xs={2}>
-            <GatsbyImage image={aboutPhoto3} alt={datoCmsAboutSection.aboutPhoto3.alt} className={aboutSectionImage} />
-        </Grid>
-      </Grid>
-      <Grid container xs > {/* TODO Dodać sekcję "Jak wygląda współpraca"*/}
-        Jak wygląda współpraca
-      </Grid>
-      <Grid container xs >
-        <GatsbyImage image={aboutPartnershipPhoto} alt={datoCmsAboutSection.aboutPartnershipPhoto.alt} className={aboutSectionImage} />
-      </Grid>
-    </Grid>
+  return (
+    <div className="container" id={sectionID}>
+      <div className="profile-photo">
+        <GatsbyImage image={profileImage} alt={datoCmsAboutSection.aboutProfileImage.alt} className={aboutSectionImage} />
+      </div>
+      <div className="description">
+        <Typography align="center" noWrap variant="h4" className={aboutSectionHeading} style={{color: 'var(--main)'}}>
+          {datoCmsAboutSection.aboutHeading}
+        </Typography>
+        <StructuredText data={datoCmsAboutSection.aboutTextContent}/>
+      </div>
+      <div className="photo-1">
+        <GatsbyImage image={aboutPhoto1} alt={datoCmsAboutSection.aboutPhoto1.alt} className={aboutSectionImage} />
+      </div>
+      <div className="photo-2">
+        <GatsbyImage image={aboutPhoto2} alt={datoCmsAboutSection.aboutPhoto2.alt} className={aboutSectionImage} />
+      </div>
+      <div className="photo-3">
+        <GatsbyImage image={aboutPhoto3} alt={datoCmsAboutSection.aboutPhoto3.alt} className={aboutSectionImage} />
+      </div>
+      <div className="partnership">
+        <h2>Jak wygląda współpraca?</h2>
+        <div className='content-wrapper'>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aliquam minus nulla beatae asperiores ratione hic, doloremque exercitationem ad odit quo aliquid nihil? Eius expedita laborum possimus magnam corporis quibusdam.
+            Natus asperiores, quia beatae est explicabo repellendus totam quisquam aliquam cumque, exercitationem cum, dolorem neque magnam nam id fuga perferendis. Maiores vitae cumque quis corrupti id incidunt consectetur possimus! Hic!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aliquam minus nulla beatae asperiores ratione hic, doloremque exercitationem ad odit quo aliquid nihil? Eius expedita laborum possimus magnam corporis quibusdam.
+            Natus asperiores, quia beatae est explicabo repellendus totam quisquam aliquam cumque, exercitationem cum, dolorem neque magnam nam id fuga perferendis. Maiores vitae cumque quis corrupti id incidunt consectetur possimus! Hic!
+          </p>
+        </div>
+      </div>
+      <div className="timeline">
+        <ResponsiveTimeline className="Timeline" />
+      </div>
+    </div>
   )
 }
 export default AboutSection

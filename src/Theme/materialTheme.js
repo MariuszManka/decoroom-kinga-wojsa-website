@@ -11,10 +11,10 @@ let materialTheme = createTheme({
 	},
 	palette: {
 	  primary: {
-		 main: '#edcb48',
+		 main: '#EEC845 ',
 		 white: '#ededed',
-		 lightenGrey: '#222222',
-		 darkenGrey: '#1B1B1B',
+		 lightenGrey: '#1B1B1B',
+		 darkenGrey: '#0F1211',
 		 darkenGold: '#B3A66C',
 		 lightenGold: '#C3B473',
 	  },

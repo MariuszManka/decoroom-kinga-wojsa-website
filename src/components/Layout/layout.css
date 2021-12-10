@@ -1,9 +1,12 @@
 :root {
-  --greyLighten: '#222222';
-  --greyDarken: '#1B1B1B';
-  --goldDarken: '#B3A66C';
-  --goldLighten: '#C3B473';
-  --white: '#ededed';
+  --main: #EEC845 ;
+  --white: #ededed;
+  --lightenGrey: #1B1B1B;
+  --darkenGrey: #0F1211;
+  --darkenGold: #B3A66C;
+  --lightenGold: #C3B473;
+  --fontPrimary: Roboto, sans-serif;
+  --fontSecondary: Montserrat, sans-serif;
 }
 
 *, *::after, *::before{
@@ -24,7 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Roboto, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -614,7 +617,7 @@ pre tt:after {
 .page-wrapper{
   display: grid; 
   grid-template-columns: 1fr; 
-  grid-template-rows: 100vh 100vh 100vh 100vh 10vh; 
+  grid-template-rows: 100vh 1fr 1fr 100vh 10vh; 
   gap: 0px 0px; 
   grid-template-areas: 
     "hero-image"
@@ -622,4 +625,5 @@ pre tt:after {
     "portfolio"
     "contact"
     "footer"; 
+  overflow-x: hidden;  
 }
