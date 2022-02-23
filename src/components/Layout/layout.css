@@ -617,7 +617,7 @@ pre tt:after {
 .page-wrapper{
   display: grid; 
   grid-template-columns: 1fr; 
-  grid-template-rows: 100vh 1fr 1fr 100vh 10vh; 
+  grid-template-rows: 100vh auto 1fr 100vh 10vh; 
   gap: 0px 0px; 
   grid-template-areas: 
     "hero-image"

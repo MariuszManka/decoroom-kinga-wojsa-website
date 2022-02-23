@@ -17,6 +17,8 @@ const AboutSection = ({ sectionID }) => {
           value
         }
         aboutHeading
+        aboutPartnershipTextLeft
+        aboutPartnershipTextRight
         aboutProfileImage {
           gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           alt
@@ -70,14 +72,12 @@ const AboutSection = ({ sectionID }) => {
       <div className="partnership">
         <h2>Jak wygląda współpraca?</h2>
         <div className='content-wrapper'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aliquam minus nulla beatae asperiores ratione hic, doloremque exercitationem ad odit quo aliquid nihil? Eius expedita laborum possimus magnam corporis quibusdam.
-            Natus asperiores, quia beatae est explicabo repellendus totam quisquam aliquam cumque, exercitationem cum, dolorem neque magnam nam id fuga perferendis. Maiores vitae cumque quis corrupti id incidunt consectetur possimus! Hic!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aliquam minus nulla beatae asperiores ratione hic, doloremque exercitationem ad odit quo aliquid nihil? Eius expedita laborum possimus magnam corporis quibusdam.
-            Natus asperiores, quia beatae est explicabo repellendus totam quisquam aliquam cumque, exercitationem cum, dolorem neque magnam nam id fuga perferendis. Maiores vitae cumque quis corrupti id incidunt consectetur possimus! Hic!
-          </p>
+          <Typography>
+            {datoCmsAboutSection.aboutPartnershipTextLeft}
+          </Typography>
+          <Typography>
+            {datoCmsAboutSection.aboutPartnershipTextRight}
+          </Typography>
         </div>
       </div>
       <div className="timeline">

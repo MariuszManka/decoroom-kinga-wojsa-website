@@ -1,10 +1,10 @@
 import React from 'react'
 import { Tabs, Tab } from '@material-ui/core'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import useConfig from 'src/hooks/useConfig'
 import { isEmpty } from 'lodash'
 import { useTopBarStyles } from './Topbar.styles'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, Link, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const TabContent = ({ hrefsArray }) => {
 
@@ -43,8 +43,9 @@ const Topbar = () => {
       }
     `
    )
-   
+      
    const logo = getImage(datoCmsHeroSection.logo)
+
 
    return (
      <div className={topBarWrapper}>

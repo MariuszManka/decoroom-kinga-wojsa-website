@@ -2,7 +2,7 @@
 	grid-area: about;
 	display: grid;
 	grid-template-columns: 2.5fr 4fr 2fr 2fr 2fr;
-	grid-template-rows: 65vh 35vh 1fr;
+	grid-template-rows: auto auto auto;
 	gap: 0px 0px;
 	grid-auto-flow: row;
 	justify-items: stretch;

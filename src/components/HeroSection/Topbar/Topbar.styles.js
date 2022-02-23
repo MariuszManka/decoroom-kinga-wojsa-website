@@ -17,6 +17,7 @@ export const useTopBarStyles = makeStyles(({ palette }) => ({
      display: 'flex',
      flexWrap: 'nowrap',
      justifyContent: 'space-between'
+   //   justifyContent: 'flex-end',
    },
    topBarTabsFlexContainer: {
       height: '100%',

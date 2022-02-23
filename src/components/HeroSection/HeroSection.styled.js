@@ -28,5 +28,19 @@ export const useHeroSectionStyles = makeStyles(({ palette }) => ({
       fontWeight: 500,
       letterSpacing: 1,
       borderLeft: `5px solid ${palette.primary.main}`,
-   }
+      // '&::before': {
+      //    content: '""',
+      //    display: 'block',
+      //    width: '50px',
+      //    height: '5px',
+      //    transform: 'rotate(90deg)',
+      //    backgroundColor: palette.primary.main,
+      // }
+   },
+   // heroSectionLogo: {
+   //    position: 'absolute',
+   //    left: '0',
+   //    top: '40%',
+   //    transform: 'translateY(-50%)',
+   // }
 }))
