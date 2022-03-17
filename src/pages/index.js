@@ -7,6 +7,8 @@ import ContactSection from '../components/ContactSection/ContactSection'
 import Layout from "../components/Layout/layout"
 import Seo from "../components/seo"
 import useConfig from 'src/hooks/useConfig'
+import { SnackbarProvider } from 'notistack';
+
 
 const IndexPage = () => {
 
@@ -16,14 +18,16 @@ const IndexPage = () => {
   const contactSectionID = hrefsArray?.[2]?.name ?? 'contact'
   
   return (
-    <Layout>
-      <Seo title="Home" />
-      <HeroSection />
-      <AboutSection sectionID={aboutSectionID} />
-      <PortfolioSection sectionID={portfolioSectionID} />
-      <ContactSection sectionID={contactSectionID} />
-      <Footer />
-    </Layout>
+    <SnackbarProvider maxSnack={3} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
+        <Layout>
+          <Seo title="Home" />
+          <HeroSection />
+          <AboutSection sectionID={aboutSectionID} />
+          <PortfolioSection sectionID={portfolioSectionID} />
+          <ContactSection sectionID={contactSectionID} />
+          <Footer />
+        </Layout>
+    </SnackbarProvider>
   )
 }
 
