@@ -36,7 +36,7 @@ const Topbar = () => {
       query Logo {
          datoCmsHeroSection {
            logo {
-               gatsbyImageData(layout: FIXED, placeholder: BLURRED, height: 40)
+               gatsbyImageData(layout: FIXED, placeholder: BLURRED, height: 100)
                alt
            }
          }

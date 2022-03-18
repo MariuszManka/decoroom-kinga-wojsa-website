@@ -16,15 +16,15 @@ export const useTopBarStyles = makeStyles(({ palette }) => ({
      backgroundColor: '#101211',
      display: 'flex',
      flexWrap: 'nowrap',
-     justifyContent: 'space-between'
-   //   justifyContent: 'flex-end',
+     justifyContent: 'flex-end',
    },
    topBarTabsFlexContainer: {
       height: '100%',
    },
    topBarLogo: {
       alignSelf: 'center',
-      margin: '7px 10px',
-      minWidth: 105,
+      position: 'absolute !important',
+      top: 30,
+      left: 30,
    }
 }))
