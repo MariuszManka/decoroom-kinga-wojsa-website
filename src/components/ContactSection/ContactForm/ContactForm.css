@@ -1,0 +1,21 @@
+.contact-form-heading{
+   color: var(--main);
+   text-transform: uppercase;
+
+}
+
+.contact-form-wrapper{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+}
+
+.contact-form-input {
+   /* border: 1px solid var(--main) !important; */
+}
+
+.contact-form-input:focus{
+   /* border: 1px solid var(--main) !important; */
+   outline: none;
+}

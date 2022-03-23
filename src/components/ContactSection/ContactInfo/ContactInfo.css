@@ -1,0 +1,14 @@
+.contact-info-icon-styles {
+   color: var(--main);
+   font-size: 2rem !important;
+}
+
+.contact-info-text-primary {
+   color: rgba(255, 255, 255, 1) !important;
+   font-size: 1.4rem !important;
+}
+
+.contact-info-text-secondary {
+   color: rgba(255, 255, 255, 0.7) !important;
+   font-size: 1.25rem !important;
+}

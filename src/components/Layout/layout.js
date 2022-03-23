@@ -5,10 +5,11 @@ import ThemeProvider from '../../Theme/ThemeProvider'
 import "./layout.css"
 
 const Layout = ({ children }) => {
-
   return (
     <ThemeProvider>
-      {children}
+      <div className="page-wrapper">
+        {children}
+      </div>
     </ThemeProvider>
   )
 }
