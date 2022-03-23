@@ -11,28 +11,28 @@ export const useHeroSectionStyles = makeStyles(({ palette }) => ({
       height: '100%',
    },
    heroSectionHeadingWrapper: {
-      position: 'absolute',
-      left: '8%',
-      top: '50%',
-      transform: 'translateY(-50%)',
       color: palette.primary.white,
-      whiteSpace: 'pre-line',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
       borderLeft: `5px solid ${palette.primary.main}`,
-      paddingLeft: 10, //Zmienić aby oddalić pionowe kreski w nagłówku względem siebie
    },
    heroSectionHeadingText: {
-      paddingLeft: 20, //Zmienić aby oddalić pionowe kreski w nagłówku od tekstu
+      paddingLeft: 20, 
       fontWeight: 500,
       letterSpacing: 1,
       borderLeft: `5px solid ${palette.primary.main}`,
+      margin: '15px', //Zmienić aby oddalić pionowe kreski w napisie na stronie tytułowej
+      whiteSpace: 'nowrap',
    },
-   heroSectionLogo: {
+   heroSectionLogoWrapper: {
       position: 'absolute',
-      left: '8%',
-      top: '35%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignContent: 'space-between',
+      left: '6%',
+      top: '45%',
       transform: 'translateY(-50%)',
+      gap: 55,
+      width: '35%',
+      zIndex: 999,
    }
 }))

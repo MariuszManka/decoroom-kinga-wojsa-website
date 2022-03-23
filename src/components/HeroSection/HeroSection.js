@@ -16,14 +16,14 @@ const HeroSection = () => {
                alt
             }
             logo {
-               gatsbyImageData(layout: FIXED, placeholder: BLURRED, height: 120)
+               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
                alt
            }
          }
       }`
    )
 
-   const { heroSectionWrapper, heroSectionImage, heroSectionHeadingWrapper, heroSectionHeadingText, heroSectionLogo } = useHeroSectionStyles()
+   const { heroSectionWrapper, heroSectionImage, heroSectionHeadingWrapper, heroSectionHeadingText, heroSectionLogo, heroSectionLogoWrapper } = useHeroSectionStyles()
    const heroImage = getImage(datoCmsHeroSection.heroImage)
    const logo = getImage(datoCmsHeroSection.logo)
 
@@ -31,13 +31,12 @@ const HeroSection = () => {
      <div className={heroSectionWrapper}>
        <Topbar /> 
        <GatsbyImage image={heroImage} alt={datoCmsHeroSection.heroImage.alt} className={heroSectionImage} />
-       {/* <div className={heroSectionHeadingWrapper}>
-         <GatsbyImage image={logo} alt={datoCmsHeroSection.logo.alt}  className={heroSectionLogo}/>
-         <Typography classes={{ root: heroSectionHeadingText }} component='h1' variant='h2'>{datoCmsHeroSection.headingText}</Typography>
-       </div> */}
-       <Container classes={{ root: heroSectionHeadingWrapper }} maxWidth='md'>
-         <Typography classes={{ root: heroSectionHeadingText }} component='h1' variant='h2'>{datoCmsHeroSection.headingText}</Typography>
-       </Container>
+       <div className={heroSectionLogoWrapper} >
+            <GatsbyImage image={logo} alt={datoCmsHeroSection.logo.alt}  className={heroSectionLogo}/>
+            <div className={heroSectionHeadingWrapper} >
+              <Typography classes={{ root: heroSectionHeadingText }} component='h1' variant='h2'>{datoCmsHeroSection.headingText}</Typography>
+            </div>
+       </div>
      </div>
    )
 }
