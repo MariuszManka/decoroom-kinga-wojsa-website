@@ -1,7 +1,6 @@
 .contact-form-heading{
    color: var(--main);
    text-transform: uppercase;
-
 }
 
 .contact-form-wrapper{
@@ -18,4 +17,13 @@
 .contact-form-input:focus{
    /* border: 1px solid var(--main) !important; */
    outline: none;
+}
+
+@media (max-width: 720px) {
+   .contact-form-heading {
+     text-align: center;
+     font-size: 1.8rem;
+     margin-top: 15px;
+     margin-bottom: 35px;
+   }
 }

@@ -5,6 +5,16 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { usePortfolioSectionStyles } from './PortfolioSection.styled'
 
 const PortfolioSection = ({ sectionID }) => {
+  const breakPoint = 720
+  const [matches, setMatches] = React.useState(
+    window.matchMedia(`(max-width: ${breakPoint}px)`).matches
+  )
+
+  React.useEffect(() => {
+    window
+    .matchMedia(`(min-width: ${breakPoint}px)`)
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
 
   const { datoCmsPortfolio } = useStaticQuery(graphql`
     query PortfolioImage {
@@ -68,42 +78,42 @@ const PortfolioSection = ({ sectionID }) => {
   return(
     <div id={sectionID} style={{padding: '0 15px', backgroundColor: 'var(--darkenGrey)'}}>
       <ImageList className={root} style={{ transform: 'translateZ(0)', maxWidth: 1400, margin: 'auto !important' }} gap={15}>
-        <ImageListItem cols={2} rows={4}>
+        <ImageListItem cols={2} rows={matches? 1 : 4}>
           <GatsbyImage image={portfolioImage1} alt={ portfolioImage1Heading }  />
           <ImageListItemBar
             title={portfolioImage1Heading}
             subtitle={portfolioImage1Subtitle}
           />
         </ImageListItem>
-        <ImageListItem cols={1} rows={2}>
+        <ImageListItem cols={matches? 2 : 1} rows={matches? 1 : 2}>
           <GatsbyImage image={portfolioImage2} alt={ portfolioImage2Heading }  />
           <ImageListItemBar
             title={portfolioImage2Heading}
             subtitle={portfolioImage2Subtitle}
           />
         </ImageListItem>
-        <ImageListItem cols={1} rows={2}>
+        <ImageListItem cols={matches? 2 : 1}rows={matches? 1 : 2}>
           <GatsbyImage image={portfolioImage3} alt={ portfolioImage3Heading }  />
           <ImageListItemBar
             title={portfolioImage3Heading}
             subtitle={portfolioImage3Subtitle}
           />
         </ImageListItem>
-        <ImageListItem cols={2} rows={4}>
+        <ImageListItem cols={2} rows={matches? 1 : 4}>
           <GatsbyImage image={portfolioImage4} alt={ portfolioImage4Heading }  />
           <ImageListItemBar
             title={portfolioImage4Heading}
             subtitle={portfolioImage4Subtitle}
           />
         </ImageListItem>
-        <ImageListItem cols={1} rows={2}>
+        <ImageListItem cols={matches? 2 : 1} rows={matches? 1 : 2}>
           <GatsbyImage image={portfolioImage5} alt={ portfolioImage5Heading }  />
           <ImageListItemBar
             title={portfolioImage5Heading}
             subtitle={portfolioImage5Subtitle}
           />
         </ImageListItem>
-        <ImageListItem cols={1} rows={2}>
+        <ImageListItem cols={matches? 2 : 1} rows={matches? 1 : 2}>
           <GatsbyImage image={portfolioImage6} alt={ portfolioImage6Heading }  />
           <ImageListItemBar
             title={portfolioImage6Heading}

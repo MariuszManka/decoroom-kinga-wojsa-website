@@ -13,6 +13,56 @@
 	  "timeline timeline timeline timeline timeline";
 }
 
+@media (max-width:720px) {
+	.container {
+		min-width: 350px;
+		grid-template-columns: 2.5fr 4fr; 
+		grid-template-rows: 350px auto auto;
+		grid-template-areas: 
+		"profile-photo description"
+		"photo-1 photo-1"
+		"partnership partnership"
+		"timeline timeline"; 
+	}
+	.photo-1 {
+		display: none;
+	}
+	.photo-2 {
+		display: none;
+	}
+	.photo-3 {
+		grid-area: photo-1 !important;
+	}
+	.description h4{
+		text-align: left;
+		font-size: 28px;
+	}
+	.description h3{
+		font-size: 16px;
+		margin-left: 10px;
+		white-space: nowrap;
+	}
+	.description p {
+		margin-left: 10px;
+		text-align: left;
+		font-size: 13px;
+	}
+	.description p:last-child{
+		display: none;
+	}
+	.partnership .content-wrapper{
+		display: grid;
+		grid-template-columns: auto !important;
+		grid-template-rows: 1fr 1fr !important;
+		row-gap: 15px;
+		text-align: justify;
+		padding: 20px 15px
+	}
+	.partnership .content-wrapper p {
+		margin-left: 0;
+	}
+ }  
+
 .timeline {
 	grid-area: timeline;
 	display: flex;
@@ -73,5 +123,5 @@
 }
 
 .photo-3 {
-	grid-area: photo-3;
+	grid-area: photo-3; 
 }

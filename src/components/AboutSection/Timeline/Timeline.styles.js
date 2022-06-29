@@ -9,5 +9,9 @@ import { makeStyles } from '@material-ui/core'
     fontSize: '25px !important', 
     padding: '10px 16px 0px 16px !important',
     color: theme.palette.primary.white, 
+
+    ['@media (max-width:720px)']: { // eslint-disable-line no-useless-computed-key
+      fontSize: '16px !important', 
+    }
   }
 }))

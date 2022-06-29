@@ -34,7 +34,8 @@ export const useContactFormStyles = makeStyles(({ palette }) => ({
     alignItems: 'flex-end',
     justifyContent: 'center',
     rowGap: 24,
-    width: '100%'
+    width: '100%',
+    padding: '0 15px',
   } 
 
 }))

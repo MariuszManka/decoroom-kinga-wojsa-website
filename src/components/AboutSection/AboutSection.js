@@ -20,7 +20,7 @@ const AboutSection = ({ sectionID }) => {
         aboutPartnershipTextLeft
         aboutPartnershipTextRight
         aboutProfileImage {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           alt
         }
         aboutPhoto1 {

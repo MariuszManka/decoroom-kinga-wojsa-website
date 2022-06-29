@@ -6,3 +6,9 @@
    justify-content: space-around;
    align-items: center;
 }
+
+@media (max-width:720px) {
+   .contact-section-wrapper {
+      flex-direction: column;
+   }
+}
