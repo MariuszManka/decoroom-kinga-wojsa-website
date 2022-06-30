@@ -16,8 +16,8 @@
 @media (max-width:720px) {
 	.container {
 		min-width: 350px;
-		grid-template-columns: 2.5fr 4fr; 
-		grid-template-rows: 350px auto auto;
+		grid-template-columns: minmax(200px, 2.5fr) 4fr; 
+		grid-template-rows: min-content auto auto;
 		grid-template-areas: 
 		"profile-photo description"
 		"photo-1 photo-1"
