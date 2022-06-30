@@ -3,18 +3,11 @@ import { ImageList, ImageListItem, ImageListItemBar } from '@material-ui/core'
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { usePortfolioSectionStyles } from './PortfolioSection.styled'
+import { useMediaQuery } from '@mui/material'
 
 const PortfolioSection = ({ sectionID }) => {
   const breakPoint = 720
-  const [matches, setMatches] = React.useState(
-    window.matchMedia(`(max-width: ${breakPoint}px)`).matches
-  )
-
-  React.useEffect(() => {
-    window
-    .matchMedia(`(min-width: ${breakPoint}px)`)
-    .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
+  const matches = useMediaQuery(`(max-width: ${breakPoint}px)`);
 
   const { datoCmsPortfolio } = useStaticQuery(graphql`
     query PortfolioImage {
