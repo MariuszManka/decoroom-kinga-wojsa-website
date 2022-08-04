@@ -30,7 +30,7 @@ const HeroSection = () => {
    return(
      <div className={heroSectionWrapper}>
        <Topbar /> 
-       <GatsbyImage image={heroImage} alt={datoCmsHeroSection.heroImage.alt} className={heroSectionImage} />
+       {/* <GatsbyImage image={heroImage} alt={datoCmsHeroSection.heroImage.alt} className={heroSectionImage} /> */}
        <div className={heroSectionLogoWrapper} >
             <GatsbyImage image={logo} alt={datoCmsHeroSection.logo.alt}  className={heroSectionLogo}/>
             <div className={heroSectionHeadingWrapper} >

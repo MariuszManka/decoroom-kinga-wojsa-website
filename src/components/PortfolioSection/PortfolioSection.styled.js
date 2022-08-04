@@ -6,4 +6,10 @@ export const usePortfolioSectionStyles = makeStyles(({ palette }) => ({
      transform: 'translateZ(0)', 
      maxWidth: 1400,
    },
+   imageItem: {
+    '& [class*="MuiImageListItem-item"]': {
+      overflow: 'visible !important',
+    }
+   }
 }))
+

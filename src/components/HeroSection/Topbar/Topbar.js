@@ -7,7 +7,7 @@ import { Link } from 'gatsby'
 
 const TabContent = ({ hrefsArray }) => {
 
-   const { topBarLink } = useTopBarStyles()
+   const { topBarLink, topBarItem } = useTopBarStyles()
 
    if(isEmpty(hrefsArray))
       return null
@@ -20,7 +20,7 @@ const TabContent = ({ hrefsArray }) => {
             
          return (
             <Link to={hrefObject.href} key={index} className={topBarLink} >
-               <Tab label={hrefObject.label} value={hrefObject.name}  style={{ whiteSpace: 'nowrap' }}/>
+               <Tab label={hrefObject.label} value={hrefObject.name}  className={topBarItem} />
             </Link>
          )
       })

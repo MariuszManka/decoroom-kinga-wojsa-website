@@ -12,3 +12,12 @@
    color: rgba(255, 255, 255, 0.7) !important;
    font-size: 1.25rem !important;
 }
+
+@media (max-width:720px) {
+   .contact-info-text-secondary {
+      font-size: 0.9rem !important;
+   }
+   .contact-info-text-primary {
+      font-size: 1.2rem !important;
+   }
+}
