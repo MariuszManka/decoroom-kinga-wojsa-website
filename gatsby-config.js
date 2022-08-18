@@ -2,10 +2,11 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Kinga Wojsa | Aranżacje Wnętrz`,
+    description: `Od 8 lat zajmuję się projektowaniem mebli oraz aranżacją wnętrz.
+Początkowo projektowanie było moją pasją i zajmowałam się tym hobbistycznie ale szybko okazało się że właśnie tym chcę się zajmować zawodowo, dlatego otwarłam własne biuro projektowe.`,
+    author: `Mariusz Mańka`,
+    siteUrl: `https://decoroom-aranzacjewnetrz.pl/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
